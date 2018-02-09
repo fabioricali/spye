@@ -1,4 +1,4 @@
-// [AIV]  Spye Build version: 0.0.3  
+// [AIV]  Spye Build version: 0.0.4  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -151,12 +151,12 @@ var Spye = function () {
             var exists = Boolean(element);
             if (exists && !this._created) {
                 this._created = true;
-                this._onCreate.call(this, element, this);
+                this._onCreate.call(null, element, this);
                 if (this.opts.unwatchAfterCreate) this.unwatch();
             }
             if (!exists && this._created) {
                 this._created = false;
-                this._onRemove.call(this, this);
+                this._onRemove.call(null, this);
                 if (this.opts.unwatchAfterRemove) this.unwatch();
             }
 
