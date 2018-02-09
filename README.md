@@ -28,7 +28,7 @@ npm install spye --save
 const Spye = require('spye');
 
 new Spye('#element')
-    .onCreate(()=> console.log('created'))
+    .onCreate((element)=> console.log('created', element))
     .onRemove(()=> console.log('removed'))
 ```
 

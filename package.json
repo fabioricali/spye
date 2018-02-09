@@ -1,6 +1,6 @@
 {
     "name": "spye",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Detect when a DOM element is created or removed",
     "main": "index.js",
     "scripts": {
