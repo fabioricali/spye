@@ -47,10 +47,11 @@ class Spye {
      * @private
      */
     check() {
-        let exists = Boolean(document.querySelector(this.query));
+        let element = document.querySelector(this.query);
+        let exists = Boolean(element);
         if (exists && !this._created) {
             this._created = true;
-            this._onCreate.call(this, this);
+            this._onCreate.call(this, element, this);
             if (this.opts.unwatchAfterCreate)
                 this.unwatch();
         }
