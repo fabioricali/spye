@@ -8,7 +8,7 @@ Detect when a DOM element is created or removed.
 
 ### Node.js
 ```
-npm install Spye --save
+npm install spye --save
 ```
 
 ### Browser
