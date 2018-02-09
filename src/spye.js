@@ -51,13 +51,13 @@ class Spye {
         let exists = Boolean(element);
         if (exists && !this._created) {
             this._created = true;
-            this._onCreate.call(this, element, this);
+            this._onCreate.call(null, element, this);
             if (this.opts.unwatchAfterCreate)
                 this.unwatch();
         }
         if (!exists && this._created) {
             this._created = false;
-            this._onRemove.call(this, this);
+            this._onRemove.call(null, this);
             if (this.opts.unwatchAfterRemove)
                 this.unwatch();
         }
