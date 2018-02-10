@@ -1,4 +1,4 @@
-// [AIV]  Spye Build version: 0.0.4  
+// [AIV]  Spye Build version: 0.0.5  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
