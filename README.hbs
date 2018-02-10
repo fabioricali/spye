@@ -27,9 +27,19 @@ npm install spye --save
 ```javascript
 const Spye = require('spye');
 
-new Spye('#element')
+new Spye('#my-element')
     .onCreate((element)=> console.log('created', element))
-    .onRemove(()=> console.log('removed'))
+    .onRemove(()=> console.log('removed'));
+
+// Create and append element to body
+let element = document.createElement('div');
+element.setAttribute('id', 'my-element');
+document.body.appendChild(element);
+
+// Remove element after 1s
+setTimeout(()=>{
+    document.body.removeChild(element);
+}, 1000);
 ```
 
 ## API
